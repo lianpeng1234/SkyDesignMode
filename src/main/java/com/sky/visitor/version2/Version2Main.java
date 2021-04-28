@@ -11,8 +11,8 @@ public class Version2Main {
         List<ResourceFile> list = resourceFiles(args[0]);
         for (ResourceFile file : list) {
             // 将指定文件中的文本提取到 txt 文件中
-            // TODO 关键点，代码编译不过期
-            // 为什么编译不过期，是因为
+            // TODO 关键点，代码编译不过，因为 java函数重载是静态绑定的，
+            //也就是说，调用类的哪个重载函数，是在编译期间，由参数的声明类型决定的，而非运行时，根据参数的实际类型决定的
             extract.extractToTxt(file);
         }
     }
